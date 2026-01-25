@@ -28,6 +28,14 @@ body {
 
 /* NAV */
 
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none !important;
+}
+
 
 .nav {
   position: fixed;
@@ -91,6 +99,7 @@ main {
   text-decoration: none;
   color: var(--text);
 }
+
 
 .scroll {
   margin-top: 80px;
