@@ -42,13 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* VISITOR COUNTER */
-fetch("https://api.counterapi.dev/v1/abhinav-joshis-team/portfolio-visits/up", {
-  cache: "no-store"
-})
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("visit-count").textContent = data.count;
+  fetch("https://api.counterapi.dev/v1/abhinav-joshis-team/portfolio-visits/up", {
+    cache: "no-store"
   })
-  .catch(() => {
-    document.getElementById("visit-count").textContent = "—";
-  });
+    .then(res => res.json())
+    .then(data => {
+      const el = document.getElementById("visit-count");
+      if (el) el.textContent = data.count;
+    })
+    .catch(() => {
+      const el = document.getElementById("visit-count");
+      if (el) el.textContent = "—";
+    });
+});
