@@ -42,11 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* VISITOR COUNTER */
-  fetch("https://api.counterapi.dev/v1/abhinavjosh1/first-counter-2646/up")
-    .then(res => res.json())
-    .then(data => {
-      const counter = document.getElementById("visit-count");
-      if (counter) counter.textContent = data.count;
-    })
-    .catch(err => console.error("Counter error:", err));
-});
+fetch("https://api.counterapi.dev/v1/abhinav-joshis-team/portfolio-visits/up", {
+  cache: "no-store"
+})
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("visit-count").textContent = data.count;
+  })
+  .catch(() => {
+    document.getElementById("visit-count").textContent = "—";
+  });
