@@ -108,6 +108,23 @@ main {
   color: var(--muted);
 }
 
+.research-meta {
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.2px;
+}
+
+.research-meta strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.research-meta span {
+  margin-right: 6px;
+}
+
+
 /* CONTENT SECTIONS (CRITICAL FIX) */
 
 .content-section {
