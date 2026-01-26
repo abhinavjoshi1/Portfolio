@@ -331,3 +331,15 @@ small {
   }
 }
 
+#visitor-counter {
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--bg);
+  padding: 6px 10px;
+  border-radius: 8px;
+  z-index: 20;
+  user-select: none;
+}
