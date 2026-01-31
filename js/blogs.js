@@ -1,4 +1,4 @@
-fetch("/blogs/index.json")
+fetch("blogs/index.json")
   .then(res => res.json())
   .then(blogs => {
     blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
