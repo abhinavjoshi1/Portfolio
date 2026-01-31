@@ -22,7 +22,7 @@
     if (!post) {
       document.getElementById("content").innerText = "Post not found.";
     } else {
-      fetch(`/blogs/${post}`)
+      fetch(`${post}`)
         .then(res => res.text())
         .then(md => {
           document.getElementById("content").innerHTML =
