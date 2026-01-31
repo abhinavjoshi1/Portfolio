@@ -4,11 +4,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("nav a");
   const sections = document.querySelectorAll(".content-section");
 
+  /* APPLY SAVED THEME */
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark");
+  }
+
   /* THEME TOGGLE */
   if (toggle) {
+    toggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+
     toggle.addEventListener("click", () => {
       body.classList.toggle("dark");
-      toggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+      const isDark = body.classList.contains("dark");
+
+      toggle.textContent = isDark ? "☀️" : "🌙";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   }
 
@@ -29,16 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* DEFAULT TAB with safe check */
+  /* DEFAULT TAB */
   const defaultTab = document.querySelector('nav a[data-section="blogs"]');
   if (defaultTab) {
     defaultTab.click();
   } else {
-    // Fallback: activate first available tab
     const firstTab = document.querySelector('nav a[data-section]');
-    if (firstTab) {
-      firstTab.click();
-    }
+    if (firstTab) firstTab.click();
   }
 
   /* VISITOR COUNTER */

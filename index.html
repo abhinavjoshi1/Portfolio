@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description"
-  content="Abhinav Joshi is a PhD researcher exploring Artificial Intelligence, Machine learning, and learning dynamics. Research, publications, and experience." />
+  content="Abhinav Joshi is a PhD researcher exploring Artificial Intelligence, Machine learning, and learning dynamics. Research, publications, and Education." />
 
   <title>Abhinav Joshi</title>
   <link rel="stylesheet" href="style.css" />
@@ -34,7 +34,7 @@
     <nav>
     <a href="#" data-section="research">Research</a>
     <a href="#" data-section="blogs">Blogs</a>
-    <a href="#" data-section="experience">Experience</a>
+    <a href="#" data-section="Education">Education</a>
     <button id="themeToggle" aria-label="Toggle theme">🌙</button>
     </nav>
 
@@ -43,37 +43,62 @@
   <main>
     <noscript>
       <p>
-        Abhinav Joshi is a PhD researcher working on Artificial Intelligence, Machine learning & learning dynamics.
+        Abhinav Joshi is a PhD researcher working in the areas of artificial intelligence, machine learning, and learning dynamics. 
+        His research interests include understanding learning behavior in intelligent systems and developing robust, data-efficient models.
       </p>
     </noscript>
 
     <!-- HERO -->
     <section class="hero">
-      <h1>Abhinav<br/>Joshi</h1>
-      <p class="subtitle">
-        PhD Researcher exploring AI & learning dynamics.
-      </p>
 
-      <div class="links">
-        <a href="https://scholar.google.com/citations?user=YOUR_ID"
-          rel="noopener noreferrer"
-          target="_blank">
-          Google Scholar
-        </a>
+      <div class="hero-left">
+        <div class="mark">
+          <span class="dot square"></span>
+          <span class="dot circle"></span>
+          <span class="dot triangle"></span>
+        </div>
 
-        <!-- <a href="https://svnit.ac.in"
-          rel="noopener noreferrer"
-          target="_blank">
-          SVNIT
-        </a> -->
+        <h1>Abhinav Joshi</h1>
 
-        <a href="mailto:abhinavjoshicse@gmail.com">
-          Email
-        </a>
+        <p class="subtitle">
+          Abhinav Joshi is a PhD researcher working in the area of Artificial Intelligence and learning dynamics. 
+        </p>
+
+        <div class="hero-links">
+          <div class="hero-actions">
+          <a class="primary" href="#">Google Scholar</a>
+          <a class="primary" href="#">Orchid</a>
+          <a class="primary" href="#">Research Gate</a>
+          <a class="primary" href="#">Email</a>
+        </div>
+        
+        <div class="news-label">Latest updates</div>
+        <div class="news-ticker">
+          <div class="ticker-row">
+            <a class="ticker-item" href="https://example.com/" target="_blank">
+              Latest updates
+            </a>
+            <a class="ticker-item" href="https://example.com" target="_blank">
+              Latest updates
+            </a>
+            <a class="ticker-item" href="https://example.com" target="_blank">
+              Latest updates
+            </a>
+          </div>
+
+          <div class="ticker-row reverse">
+          </div>
+        </div>
+
+
       </div>
 
+      <div class="hero-right">
+        <div class="shape triangle"></div>
+        <div class="shape square"></div>
+        <div class="shape circle"></div>
+      </div>
 
-      <div class="scroll">SCROLL TO EXPLORE</div>
     </section>
     
 
@@ -81,46 +106,9 @@
     <section id="blogs" class="section content-section">
       <h2 class="section-title">Blogs</h2>
 
-      <div class="blog-divider">
-      <span>1.</span>
-      </div>
-      <div class="card">
-        <div>
-          <h3>Title</h3>
-          <p>Subtitle</p>
-        </div>
-        <span>Date</span>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>Title</h3>
-          <p>Subtitle</p>
-        </div>
-        <span>Date</span>
-      </div>
-
-      <div class="blog-divider">
-      <span>2.</span>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>Title</h3>
-          <p>Subtitle</p>
-        </div>
-        <span>Date</span>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>Title</h3>
-          <p>Subtitle</p>
-        </div>
-        <span>Date</span>
-      </div>
-    
+      <div id="blogs-container"></div>
     </section>
+
 
 
     <!-- RESEARCH -->
@@ -150,9 +138,9 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section content-section">
-      <h2 class="section-title">Experience</h2>
+    <!-- EDUCATION -->
+    <section id="Education" class="section content-section">
+      <h2 class="section-title">Education</h2>
 
       <div class="timeline">
         <div class="timeline-item right">
@@ -192,6 +180,15 @@
   Visitors: <span id="visit-count">—</span>
   </div>
 
-  <script src="script.js"></script>
+  <script src="/js/blogs.js"></script>
+  <script src="/js/marked.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script>
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+
 </body>
 </html>
