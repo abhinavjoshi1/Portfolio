@@ -26,7 +26,7 @@ fetch("blogs/index.json")
 
       card.onclick = () => {
         window.location.href =
-          `/blogs/blogs.html?post=${blog.file}`;
+          `blogs/blogs.html?post=${blog.file}`;
       };
 
       container.appendChild(card);
