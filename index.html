@@ -34,7 +34,10 @@
     <nav>
     <a href="#" data-section="research">Research</a>
     <a href="#" data-section="blogs">Blogs</a>
+    <a href="#" data-section="projects">Projects</a>
+    <a href="#honors" data-section="honors">Honors</a>
     <a href="#" data-section="Education">Education</a>
+    <a href="contact.html" data-section="contact">Contact</a>
     <button id="themeToggle" aria-label="Toggle theme">🌙</button>
     </nav>
 
@@ -69,7 +72,7 @@
           <a class="primary" href="#">Google Scholar</a>
           <a class="primary" href="#">Orchid</a>
           <a class="primary" href="#">Research Gate</a>
-          <a class="primary" href="#">Email</a>
+          <a class="primary" href="#">Cirriculum Vitae</a>
         </div>
         
         <div class="news-label">Latest updates</div>
@@ -106,6 +109,7 @@
     <section id="blogs" class="section content-section">
       <h2 class="section-title">Blogs</h2>
 
+      <div id="blog-filters" class="blog-filters"></div>
       <div id="blogs-container"></div>
     </section>
 
@@ -120,13 +124,12 @@
       </p>
 
 
-      <div class="research-meta">
-      <span><strong>h-index</strong> - </span>
-      <span>·</span>
-      <span><strong>Citations</strong> - </span>
-      <span>·</span>
-      <span><strong>Papers</strong> - </span>
+      <div class="research-meta-row">
+        <span>H-Index</span>
+        <span>Citations</span>
+        <span>Papers</span>
       </div>
+
 
 
       <div class="card">
@@ -137,6 +140,24 @@
         <span>Status</span>
       </div>
     </section>
+
+    
+    <!-- PROJECTS -->
+     <!-- TO BE ADDED LATER -->
+    <section id="projects" class="section content-section">
+      <h2 class="section-title">Projects</h2>
+
+      <div id="projects-container"></div>
+    </section> 
+   
+
+    <!-- HONORS -->
+    <section id="honors" class="section content-section">
+      <h2 class="section-title">Honors &amp; Awards</h2>
+
+      <div id="honors-container"></div>
+    </section>
+
 
     <!-- EDUCATION -->
     <section id="Education" class="section content-section">
@@ -172,6 +193,32 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="section content-section">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-layout single">
+        <!-- Contact info injected via JS -->
+        <div id="contact-container"></div>
+
+        <!-- Location block -->
+        <div class="contact-location">
+          <div class="location-title">Location</div>
+          <div class="location-text">
+            Sardar Vallabhbhai National Institute of Technology<br>
+            Surat, Gujarat, India
+          </div>
+          <a
+            href="https://www.google.com/maps?q=SVNIT+Surat"
+            target="_blank"
+            class="location-link">
+            View on Google Maps →
+          </a>
+        </div>
+      </div>
+    </section>
+
+
 
 
   </main>
@@ -183,6 +230,10 @@
   <script src="js/blogs.js"></script>
   <script src="js/marked.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/honors.js"></script>
+
   <script>
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {

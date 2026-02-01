@@ -1,34 +1,54 @@
-fetch("blogs/index.json")
+const container = document.getElementById("blogs-container");
+const filtersContainer = document.getElementById("blog-filters");
+
+let allBlogs = [];
+let activeCategory = "All";
+
+fetch("../blogs/index.json")
   .then(res => res.json())
-  .then(blogs => {
-    blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+  .then(data => {
+    allBlogs = data;
+    renderFilters(data);
+    renderBlogs(data);
+  });
 
-    const container = document.getElementById("blogs-container");
+function renderFilters(data) {
+  const categories = ["All", ...new Set(data.map(b => b.category))];
 
-    blogs.forEach((blog, i) => {
-      if (i % 2 === 0) {
-        const divider = document.createElement("div");
-        divider.className = "blog-divider";
-        divider.innerHTML = `<span>${Math.floor(i / 2) + 1}.</span>`;
-        container.appendChild(divider);
-      }
+  filtersContainer.innerHTML = categories.map(cat => `
+    <span class="blog-filter ${cat === "All" ? "active" : ""}"
+          data-category="${cat}">
+      ${cat}
+    </span>
+  `).join("");
 
-      const card = document.createElement("div");
-      card.className = "card";
+  document.querySelectorAll(".blog-filter").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".blog-filter")
+        .forEach(b => b.classList.remove("active"));
 
-      card.innerHTML = `
-        <div>
-          <h3>${blog.title}</h3>
-          <p>${blog.subtitle}</p>
-        </div>
-        <span>${blog.date}</span>
-      `;
+      btn.classList.add("active");
+      activeCategory = btn.dataset.category;
 
-      card.onclick = () => {
-        window.location.href =
-          `blogs/blogs.html?post=${blog.file}`;
-      };
+      const filtered =
+        activeCategory === "All"
+          ? allBlogs
+          : allBlogs.filter(b => b.category === activeCategory);
 
-      container.appendChild(card);
+      renderBlogs(filtered);
     });
   });
+}
+
+function renderBlogs(blogs) {
+  container.innerHTML = blogs.map(blog => `
+    <a class="card"
+       href="blogs.html?post=blogs/${blog.file}">
+      <div>
+        <h3>${blog.title}</h3>
+        <p>${blog.subtitle}</p>
+      </div>
+      <span>${blog.date}</span>
+    </a>
+  `).join("");
+}

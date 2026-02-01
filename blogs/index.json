@@ -1,8 +1,9 @@
 [
   {
-    "title": "Test Blog",
-    "subtitle": "First markdown post",
-    "date": "2026-01-31",
-    "file": "test_file.md"
+    "title": "",
+    "subtitle": "",
+    "date": "",
+    "file": "",
+    "category": ""
   }
 ]
