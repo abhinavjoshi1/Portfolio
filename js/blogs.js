@@ -7,9 +7,10 @@ let activeCategory = "All";
 fetch("../blogs/index.json")
   .then(res => res.json())
   .then(data => {
-    allBlogs = data;
-    renderFilters(data);
-    renderBlogs(data);
+    // remove disabled blogs globally
+    allBlogs = data.filter(b => b.disabled !== true);
+    renderFilters(allBlogs);
+    renderBlogs(allBlogs);
   });
 
 function renderFilters(data) {
