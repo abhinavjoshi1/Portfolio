@@ -4,7 +4,7 @@ const filtersContainer = document.getElementById("blog-filters");
 let allBlogs = [];
 let activeCategory = "All";
 
-fetch("../blogs/index.json")
+fetch("index.json")
   .then(res => res.json())
   .then(data => {
     // remove disabled blogs globally
