@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("honors-container");
   if (!container) return;
 
-  fetch("honors.json")
+  fetch("data/honors.json")
     .then(res => res.json())
     .then(data => {
       container.innerHTML = `

@@ -1,4 +1,4 @@
-fetch("research.json")
+fetch("data/research.json")
   .then(res => res.json())
   .then(papers => {
     const container = document.getElementById("research-container");
