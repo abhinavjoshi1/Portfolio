@@ -884,3 +884,12 @@ body:not(.dark) .ticker-item {
     grid-template-columns: 1fr;
   }
 }
+
+
+.project-meta {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+

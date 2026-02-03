@@ -36,7 +36,7 @@
     <a href="#" data-section="blogs">Blogs</a>
     <a href="#" data-section="projects">Projects</a>
     <a href="#honors" data-section="honors">Honors</a>
-    <a href="#" data-section="Education">Education</a>
+    <a href="#" data-section="Education">Timeline</a>
     <a href="contact.html" data-section="contact">Contact</a>
     <button id="themeToggle" aria-label="Toggle theme">🌙</button>
     </nav>
@@ -152,39 +152,13 @@
     </section>
 
 
-    <!-- EDUCATION -->
+    <!-- TIMELINE -->
     <section id="Education" class="section content-section">
-      <h2 class="section-title">Education</h2>
-
-      <div class="timeline">
-        <div class="timeline-item right">
-          <span class="dot"></span>
-          <div class="content">
-            <small>July 2025 – Present</small>
-            <h3>PhD Researcher</h3>
-            <p>Sardar Vallabhbhai National Institute of Technology, Surat (SVNIT)</p>
-          </div>
-        </div>
-
-        <div class="timeline-item left">
-          <span class="dot"></span>
-          <div class="content">
-            <small>2023 – 2025</small>
-            <h3>Software Engineer</h3>
-            <p>Qbit Labs Pvt. Ltd, Gurugram</p>
-          </div>
-        </div>
-
-        <div class="timeline-item right">
-          <span class="dot"></span>
-          <div class="content">
-            <small>2019 – 2023</small>
-            <h3>B.Tech, CSE</h3>
-            <p>Netaji Subhas University of Technology, East Campus</p>
-          </div>
-        </div>
-      </div>
+      <h2 class="section-title">Academic & Professional</h2>
+      <div id="education-container" class="projects-container"></div>
     </section>
+
+
 
     <!-- CONTACT -->
     <section id="contact" class="section content-section">
@@ -220,13 +194,14 @@
   Visitors: <span id="visit-count">—</span>
   </div>
 
-  <script src="js/blogs.js"></script>
   <script src="js/marked.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/projects.js"></script>
-  <script src="js/contact.js"></script>
   <script src="js/research.js"></script>
+  <script src="js/blogs.js"></script>
+  <script src="js/projects.js"></script>
   <script src="js/honors.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/contact.js"></script>
 
   <script>
     const theme = localStorage.getItem("theme");
