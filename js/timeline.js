@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("education-container");
   if (!container) return;
 
-  fetch("/timeline.json")
+  fetch("timeline.json")
     .then(res => res.json())
     .then(items => {
       container.innerHTML = items
