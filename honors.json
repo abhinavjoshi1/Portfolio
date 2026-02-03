@@ -1,15 +1,18 @@
 [
   {
+    "disabled": true,
     "title": "Example Text",
     "subtitle": "Example Text",
     "icon": "✦"
   },
   {
+    "disabled": true,
     "title": "Example Text",
     "subtitle": "Example Text",
     "icon": "◉"
   },
   {
+    "disabled": true,
     "title": "Example Text",
     "subtitle": "Example Text",
     "icon": "★"

@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       container.innerHTML = `
         <div class="honors-grid">
-          ${data.map(item => `
+          ${data.filter(item=> item.disabled !== true)
+            .map(item => `
             <div class="honor-card">
               <div class="honor-icon">${item.icon}</div>
               <div class="honor-text">

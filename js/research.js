@@ -6,7 +6,7 @@ fetch("/research.json")
 
     papers.forEach(paper => {
 
-        if (paper.disabled === true) return;
+      if (paper.disabled === true) return;
       const card = document.createElement("a");
       card.className = "card";
       card.href = paper.link || "#";
